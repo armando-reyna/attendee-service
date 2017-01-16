@@ -1,8 +1,10 @@
 #!/bin/bash
 
+set -e
+
 apt-get update && apt-get install -y curl
 
-set -ex
+set -x
 
 if [ -z $ATTENDEE_SERVICE_URL ]; then
   echo "ATTENDEE_SERVICE_URL not set"
